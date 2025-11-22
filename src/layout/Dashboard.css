@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+}
+.outlet {
+  flex: 1;
+  padding: 20px;
+}
