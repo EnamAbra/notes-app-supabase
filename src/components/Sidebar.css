@@ -1,0 +1,75 @@
+header {
+  padding: 30px;
+  background: #432818;
+  height: 48px;
+  color: #ede0d4;
+}
+header jpg {
+  font-size: 40px;
+}
+.sidenav {
+  width: 240px;
+  background: #432818;
+  position: absolute;
+left: -100%;
+top: 0;
+
+  height: 95vh;
+  padding: 0 30px;
+  transition: all 1s;
+}
+.sidenav.active{
+  left: 0;
+}
+ul {
+  padding: 0;
+}
+ul li {
+  list-style: none;
+  margin: 25px 0;
+}
+ul li a {
+  text-decoration: none;
+  color: #eaecef;
+
+  display: block;
+  padding: 10px 15;
+  font-size: 16px;
+  border-radius: 6px;
+}
+ul li a:hover,
+ul li a :active {
+  background: #432818;
+}
+.logo{
+  margin-top: 30px;
+  width: 30px;
+}
+.content {
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+
+/* when sidebar is open */
+.content.shift {
+  margin-left: 240px;
+}
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.dashboard-content {
+  margin-left: 0;
+  transition: 0.3s;
+  padding: 20px;
+}

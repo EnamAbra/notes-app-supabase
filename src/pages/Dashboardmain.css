@@ -1,0 +1,174 @@
+/* DashboardPage.css */
+
+/* --- Base Layout & Spacing --- */
+
+.dashboard-page-container {
+    min-height: 100vh;
+    background-color: #f7f7f7; /* Light background */
+}
+
+/* Controls Header (Search/Buttons) */
+.dashboard-content-header {
+    background: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    padding: 15px 20px;
+    z-index: 50; /* Ensure it stays above content sections */
+}
+
+.dashboard-header-controls {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Allows wrap on small screens */
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.dashboard-main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 30px; /* Extra top spacing */
+}
+
+.notes-section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    padding-left: 5px;
+}
+
+.section-separator {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 40px 0;
+}
+
+/* --- Controls Styling --- */
+
+.search-input {
+    flex-grow: 1; /* Takes up available space */
+    max-width: 300px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.btn-add-note, .btn-logout {
+    padding: 8px 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
+}
+
+.btn-add-note {
+    background-color: #06aed5;
+    color: white;
+}
+
+.btn-add-note:hover {
+    background-color: #47686f;
+}
+
+.btn-logout {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-logout:hover {
+    background-color: #c82333;
+}
+
+
+/* --- Notes Grid and Card Styling --- */
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Good spacing between cards */
+}
+
+.note-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: 1px solid #eee;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.note-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.note-content-area h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    /* Ensure title doesn't overflow */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.note-content-area p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    /* Limit lines for clean appearance (mimics line-clamp) */
+   
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+.note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #999;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.note-pin-status {
+    font-weight: 700;
+    color: #ffc107;
+}
+
+.pinned-card {
+    border: 2px solid #ffc107; /* Highlight for pinned cards */
+}
+
+.empty-state-message {
+    padding: 50px;
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+}

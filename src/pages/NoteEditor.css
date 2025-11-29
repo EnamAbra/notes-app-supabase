@@ -1,0 +1,141 @@
+/* NoteEditor.css */
+
+/* --- Modal Overlay --- */
+
+.editor-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* High z-index to cover everything */
+    padding: 20px;
+}
+
+.editor-modal-content {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    /* Optional: Small entrance animation */
+    transform: scale(1);
+    transition: transform 0.3s ease-out;
+}
+
+/* --- Editor Elements --- */
+
+.editor-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.editor-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box; /* Important for padding/border inside width */
+}
+
+.editor-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.editor-title-input {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.editor-textarea {
+    resize: none;
+    line-height: 1.5;
+    min-height: 200px;
+}
+
+/* --- Footer and Character Count --- */
+
+.editor-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.char-count {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.count-invalid {
+    color: #dc3545; /* Red color for invalid count */
+    font-weight: 700;
+}
+
+/* --- Pin Toggle --- */
+
+.pin-toggle-label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+    cursor: pointer;
+}
+
+.pin-checkbox {
+    margin-right: 8px;
+    /* Basic styling for checkbox, advanced styling often requires custom wrappers */
+}
+
+/* --- Action Buttons --- */
+
+.editor-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.btn-editor-cancel, .btn-editor-save {
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.btn-editor-cancel {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.btn-editor-cancel:hover {
+    background-color: #dee2e6;
+}
+
+.btn-editor-save {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-editor-save:hover {
+    background-color: #0056b3;
+}
+
+.btn-editor-save:disabled {
+    background-color: #007bff;
+    opacity: 0.5;
+    cursor: not-allowed;
+}

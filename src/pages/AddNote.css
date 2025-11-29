@@ -1,0 +1,139 @@
+/* AddNotePage.css */
+
+/* --- Modal Overlay --- */
+
+.add-note-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    padding: 20px;
+}
+
+.add-note-content {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+    transition: transform 0.3s ease-out;
+}
+
+/* --- Editor Elements --- */
+
+.add-note-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px; 
+}
+
+.add-note-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.add-note-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.note-title-input {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.note-textarea {
+    resize: vertical; 
+    line-height: 1.5;
+    min-height: 250px;
+}
+
+/* --- Footer and Character Count --- */
+
+.add-note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.char-count {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.count-invalid {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+/* --- Pin Toggle --- */
+
+.pin-toggle-label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+    cursor: pointer;
+}
+
+.pin-checkbox {
+    margin-right: 8px;
+    accent-color: #ffc107;
+}
+
+/* --- Action Buttons --- */
+
+.add-note-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.btn-note-cancel, .btn-note-save {
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.btn-note-cancel {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.btn-note-cancel:hover {
+    background-color: #dee2e6;
+}
+
+.btn-note-save {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-note-save:hover {
+    background-color: #0056b3;
+}
+
+.btn-note-save:disabled {
+    background-color: #007bff;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
